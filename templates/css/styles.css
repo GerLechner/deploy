@@ -1,0 +1,310 @@
+:root {
+    --fuenteHeadings: 'Be Vietnam Pro', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --principal:  #672A0A;
+    --secundario: #AD9583;
+    --blanco: #fff;
+    --oscuro:  #1A1413;
+}
+
+html {
+    box-sizing: border-box;   /*box model*/
+    font-size: 62.5%;
+}
+
+*, *:before, *:after { /*box model*/
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--fuenteParrafos);
+    line-height: 2;
+}
+
+/* Globales */
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    /* o similar : 
+    width: min ( 90%, 120rem ); (usa el minimo que aparezca) 
+    */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: font-size .5s;
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuenteHeadings);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+img {
+   max-width: 100%;
+}
+
+/* utilidades */ 
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------*/
+
+/* header */
+
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
+
+.header {
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* x - y */
+    padding-top: 2rem;
+}
+
+.logo__nombre {
+    color: var(--blanco);
+    font-weight: lighter;
+}
+
+.logo__nombre--bold {
+    font-weight: bold;
+}
+
+.header__texto {
+    margin-top: 5rem;
+    color: var(--blanco);
+}
+@media (min-width: 768px) {
+        
+    .header__texto {
+        margin-top: 15rem;
+        color: var(--blanco);
+    }
+}
+
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /*centrado vertical */
+    }
+}
+
+.nav {
+    padding-top: 3rem;
+}
+
+.nav__enlace {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .nav {
+        padding-top: 0;
+        display: flex;
+        gap: 2rem;
+        color: var(--blanco);
+    }
+}
+
+/* contenido principal */
+@media (min-width: 768px) {
+    
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+/*entrada de blogs */
+
+.entrada-blog{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--secundario);
+}
+
+.entrada-blog:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    background-color: var(--oscuro);
+    font-family: var(--fuenteHeadings);
+    text-align: center;
+    padding: 1rem 5rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.boton:hover {
+    cursor:pointer;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block; /* para que pueda poner margin y width */
+        padding: 1rem 5rem;
+        background-color: var(--oscuro);
+        color: var(--blanco);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+/* sidebar y parte de cursos */
+
+.widget-cursos {
+    border-bottom: var(--secundario); 
+    list-style: none;  
+    border-bottom: 1px solid var(--secundario);
+    margin-bottom: 2rem;
+}
+
+.widget-cursos:last-child {
+    border-bottom: none;
+}
+
+.curso__label,
+.widget-cursos__label {
+    font-weight: bold;
+    font-family: var(--fuenteHeadings);
+}
+
+.curso__info,
+.widget-cursos__info {
+    font-weight: lighter;
+}
+
+.boton--cursos {
+    background-color: var(--principal);
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--oscuro);
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    
+    .footer {
+        height: 10rem;
+        background-color: var(--oscuro);
+    }
+}
+
+/* nosotros */
+@media (min-width: 768px) {
+    
+    .bloque-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* cursos */
+
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--secundario)
+}
+
+.curso:last-of-type {
+    border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+        border-bottom: 1px solid var(--secundario)
+    }
+}
+
+/*Contacto*/
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 90%;
+    padding: 4rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--secundario);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
