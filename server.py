@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('src/index.html')
+    return render_template('/src/index.html')
 
 @app.route('/romper')
 def romper():
