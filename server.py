@@ -1,5 +1,5 @@
 #server.py
-from flask import Flask
+from flask import Flask, render_template
 import sys
 import os
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return '<h1> me llamo German </h1>'
+    return render_template('src/index.html')
 
 @app.route('/romper')
 def romper():
