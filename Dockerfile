@@ -7,7 +7,8 @@ WORKDIR /app
 
 # Instala las dependencias necesarias
 RUN pip install --no-cache-dir Flask==2.0.1 Werkzeug==2.2.2
-
+#actualizacion para los tests en unittest
+RUN pip install --upgrade Flask Werkzeug 
 
 # Copia el contenido actual al contenedor en /app
 COPY . /app
